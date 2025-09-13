@@ -122,6 +122,6 @@ C:\Users\teofi\Downloads\OSC-LQ2> if exist CS3A\Students\Students.txt (
     ren CS3A\Subjects\Subjects.txt cs3a_subjects.pdf
     ren CS3B\Subjects\Subjects.txt cs3b_subjects.pdf
     ren CS3C\Subjects\Subjects.txt cs3c_subjects.pdf
-    echo Subjects.txt files have been updated instead.
 )
+
 
