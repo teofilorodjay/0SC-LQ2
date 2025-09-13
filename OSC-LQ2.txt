@@ -1,0 +1,127 @@
+Microsoft Windows [Version 10.0.26100.6584]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\teofi> cd downloads
+
+C:\Users\teofi\Downloads> md OSC-LQ2
+
+C:\Users\teofi\Downloads> cd OSC-LQ2
+
+C:\Users\teofi\Downloads\OSC-LQ2> md CS3A CS3B CS3C
+
+C:\Users\teofi\Downloads\OSC-LQ2>md CS3A\Subjects CS3A\Students
+
+C:\Users\teofi\Downloads\OSC-LQ2>md CS3B\Subjects CS3B\Students
+
+C:\Users\teofi\Downloads\OSC-LQ2>md CS3C\Subjects CS3C\Students
+
+C:\Users\teofi\Downloads\OSC-LQ2> echo Dr. Helen Evelyn Valdez > CS3_Adviser.txt
+
+C:\Users\teofi\Downloads\OSC-LQ2>move CS3_Adviser.txt CS3A
+        1 file(s) moved.
+
+C:\Users\teofi\Downloads\OSC-LQ2>copy CS3A\CS3_Asviser.txt Cs3B
+The system cannot find the file specified.
+
+C:\Users\teofi\Downloads\OSC-LQ2>copy CS3A\CS3_Asviser.txt CS3B
+The system cannot find the file specified.
+
+C:\Users\teofi\Downloads\OSC-LQ2>copy CS3A CS3B
+CS3A\CS3_Adviser.txt
+        1 file(s) copied.
+
+C:\Users\teofi\Downloads\OSC-LQ2>copy CS3A CS3B
+CS3A\CS3_Adviser.txt
+Overwrite CS3B\CS3_Adviser.txt? (Yes/No/All): No
+        0 file(s) copied.
+
+C:\Users\teofi\Downloads\OSC-LQ2>copy CS3A CS3C
+CS3A\CS3_Adviser.txt
+        1 file(s) copied.
+
+C:\Users\teofi\Downloads\OSC-LQ2>echo Dr. Arjay Gacula > CS3B\CS3C_Adviser.txt
+
+C:\Users\teofi\Downloads\OSC-LQ2>echo Dr. Rosemarie Lee > CS3C\CSC_Adviser.txt
+
+C:\Users\teofi\Downloads\OSC-LQ2> notepad Subjects.txt
+
+C:\Users\teofi\Downloads\OSC-LQ2>move  Subjects.txt CS3A\Subjects
+        1 file(s) moved.
+
+C:\Users\teofi\Downloads\OSC-LQ2>move  Subjects.txt CS3B\Subjects
+The system cannot find the file specified.
+
+C:\Users\teofi\Downloads\OSC-LQ2>copy CS3A\Subjects\Subjects.txt CS3B\Subjects
+        1 file(s) copied.
+
+C:\Users\teofi\Downloads\OSC-LQ2>copy CS3A\Subjects\Subjects.txt CS3C\Subjects
+        1 file(s) copied.
+
+C:\Users\teofi\Downloads\OSC-LQ2>notepad CS3B\Subjects\Subjects.txt
+
+C:\Users\teofi\Downloads\OSC-LQ2>notepad CS3C\Subjects\Subjects.txt
+
+C:\Users\teofi\Downloads\OSC-LQ2>student.txt
+'student.txt' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\teofi\Downloads\OSC-LQ2>notepad Student.txt
+
+C:\Users\teofi\Downloads\OSC-LQ2> move Student.txt CS3A\Students
+        1 file(s) moved.
+
+C:\Users\teofi\Downloads\OSC-LQ2>copy CS3A\Students\Students.txt CS3B\Students
+The system cannot find the file specified.
+
+C:\Users\teofi\Downloads\OSC-LQ2>copy CS3A\Students\Student.txt CSS3B\Students
+The system cannot find the path specified.
+        0 file(s) copied.
+
+C:\Users\teofi\Downloads\OSC-LQ2>copy CS3A\Students CS3B\Students
+CS3A\Students\Student.txt
+        1 file(s) copied.
+
+C:\Users\teofi\Downloads\OSC-LQ2>copy CS3A\Students CS3C\Students
+CS3A\Students\Student.txt
+        1 file(s) copied.
+
+C:\Users\teofi\Downloads\OSC-LQ2>notepad CS3B\Students\Student.txt
+
+C:\Users\teofi\Downloads\OSC-LQ2>notepad CS3C\Students\Student.txt
+
+C:\Users\teofi\Downloads\OSC-LQ2>fc CS3A\Students\Student.txt CS3C\Students\Student.txt
+Comparing files CS3A\STUDENTS\Student.txt and CS3C\STUDENTS\STUDENT.TXT
+FC: no differences encountered
+
+
+C:\Users\teofi\Downloads\OSC-LQ2>fc CS3B\Subjects\Subject.txt CS3C\Subjetcs\Subject.txt
+FC: cannot open CS3B\SUBJECTS\SUBJECT.TXT - No such file or folder
+
+
+C:\Users\teofi\Downloads\OSC-LQ2>fc CS3B\Subjects CS3C\Subjects\Subject.txt
+FC: cannot open CS3B\SUBJECTS - No such file or folder
+
+
+C:\Users\teofi\Downloads\OSC-LQ2>dir /s /b *.txt > all_txt_files.txt
+
+C:\Users\teofi\Downloads\OSC-LQ2> if exis CS3A\Students\Students.txt (
+CS3A\Students\Students.txt was unexpected at this time.
+
+C:\Users\teofi\Downloads\OSC-LQ2> if exist CS3A\Students\Students.txt (
+    ren CS3A\Students\Students.txt cs3a_student.pdf
+    echo The file Students.txt has been updated in CS3A!
+    if exist CS3B\Students\Students.txt (
+        ren CS3B\Students\Students.txt cs3b_student.pdf
+        echo The file Students.txt has been updated in CS3B!
+        if exist CS3C\Students\Students.txt (
+            ren CS3C\Students\Students.txt cs3c_student.pdf
+            echo The file Students.txt has been updated in CS3C!
+        )
+    )
+) else (
+    ren CS3A\Subjects\Subjects.txt cs3a_subjects.pdf
+    ren CS3B\Subjects\Subjects.txt cs3b_subjects.pdf
+    ren CS3C\Subjects\Subjects.txt cs3c_subjects.pdf
+    echo Subjects.txt files have been updated instead.
+)
+
